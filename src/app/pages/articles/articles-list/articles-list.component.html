@@ -1,0 +1,22 @@
+<shared-header img="articles.jpg" page="articles">
+  <div class="title">
+    ARTYKUŁY
+  </div>
+</shared-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+      <p class="intro">Tutaj znajdziesz teksty stworzone przez członków naszego klubu. Część z&nbsp;nich przybliża działalność Toastmasters, w&nbsp;innych dzielimy się naszą wiedzą na temat przemawiania. Zapraszamy do lektury.</p>
+
+      <!-- Main articles page -->
+      <div class="articles-list" *ngIf="selectedArticle==null">
+        <div *ngFor="let article of articles">
+          <a routerLink="{{'/artykuły/'+article.id}}"><h2 class="mainArticleLink">{{article.title}}</h2></a>
+          <p class="article-description">{{this.textService.shortenDescription(article.paragraphs[0])}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

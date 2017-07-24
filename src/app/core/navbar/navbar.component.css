@@ -1,0 +1,83 @@
+.logo {
+	width: auto;
+  height: 30px;
+  transition: all .35s;
+}
+
+.fb {
+  height: 20px;
+  transition: all .35s;
+}
+.navbar {
+  background-color: white;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+  border-bottom: 1px #a9b2b1;
+}
+.page-scroll-navbar {
+	background-color: white !important;
+  border-bottom: 1px #a9b2b1;
+}
+.title {
+  color: white;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  text-transform: uppercase;
+}
+
+.page-scroll-title {
+  color: #004165;
+  font-size: 16px;
+  transition: all .5s;
+  text-shadow: none;
+}
+.nav-link {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color:#004165 !important;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+
+.page-scroll-nav-link {
+  text-shadow: none;
+}
+
+@media(min-width:768px) {
+  .navbar {
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-size: 160%;
+    font-weight: 500;
+  }
+
+  .page-scroll-nav-link {
+    color: #004165 !important;
+    font-size: 100%;
+  }
+
+  .logo {
+    height: 58px;
+  }
+
+  .page-scroll-logo {
+    width: auto;
+    height: 30px;
+  }
+
+  .fb {
+    height: 55px;
+  }
+
+  .page-scroll-fb {
+    width: auto;
+    height: 20px;
+  }
+}

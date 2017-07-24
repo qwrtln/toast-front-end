@@ -1,0 +1,41 @@
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" [ngClass]= "{'page-scroll-navbar': isScrolled}" *ngIf="(!isSmall || scrolledUp) || !isScrolled" [@slideInOut]>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" (click)="toggleCollapse()">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+      </button>
+      <a class="nav-link navbar-toggle collapsed" href="http://facebook.com/ToastmastersStudents" target="_blank">
+        <img class="fb" [ngClass]= "{'page-scroll-fb': isScrolled}" src="assets/images/fb.png">
+      </a>
+      <a class="navbar-brand page-scroll title" [ngClass]= "{'page-scroll-title': isScrolled}" routerLink="">
+        <span><img class="logo" [ngClass]= "{'page-scroll-logo': isScrolled}" src="assets/images/toastmasters-logo.png"></span>
+        <span class="hidden-xs hidden-sm">TOASTMASTERS STUDENTS</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" [ngClass]="{ 'in': !isCollapsed }" id="tm-navbar">
+      <!-- Big screen -->
+      <ul class="nav navbar-nav navbar-right" *ngIf="!isSmall; else smallScreen">
+        <li *ngFor="let l of navbar_links">
+          <a class="nav-link" [ngClass]= "{'page-scroll-nav-link': isScrolled}" routerLink="{{l.link}}">{{l.title}}</a>
+        </li>
+        <li>
+          <a class="nav-link" href="http://facebook.com/ToastmastersStudents" target="_blank">
+            <img class="fb" [ngClass]= "{'page-scroll-fb': isScrolled}" src="assets/images/fb.png">
+          </a>
+        </li>
+      </ul>
+      <!-- Small screen -->
+      <ng-template #smallScreen>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngFor="let l of navbar_links">
+          <a class="nav-link page-scroll-nav-link" data-toggle="collapse" target="_self" routerLink="{{l.link}}" (click)="toggleCollapse()">{{l.title}}</a>
+        </li>
+      </ul>
+      </ng-template>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>

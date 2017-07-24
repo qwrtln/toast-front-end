@@ -1,0 +1,50 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.bg-tm-blue {
+  background-color: #004165;
+  color: white;
+}
+
+.bg-tm-yellow {
+  background-color: #f2df74;
+}
+
+.bg-tm-gray {
+  background-color: #a9b2b1;
+}
+
+.bg-tm-red {
+  background-color: #772432;
+}
+
+.text-tm-blue {
+  color: #004165;
+}
+
+.text-tm-yellow {
+  color: #f2df74;
+}
+
+.text-tm-gray {
+  color: #a9b2b1;
+}
+
+.text-tm-red {
+  color: #772432;
+}
+
+.border-top-tm-red {
+  border-top: 5px solid #772432;
+}
+
+.border-bottom-tm-red {
+  border-bottom: 5px solid #772432;
+}
+
+.top {
+  margin-top: 100px;
+}

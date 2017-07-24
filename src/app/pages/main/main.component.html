@@ -1,0 +1,156 @@
+﻿<!-- Header -->
+<a name="page-top"></a>
+<div class="intro-header" style="background: url(assets/images/bg.jpg) no-repeat center center;background-size: cover;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="intro-message">
+          <h1>Toastmasters Students</h1>
+          <h3>KLUB MÓWCÓW I LIDERÓW</h3>
+          <hr class="intro-divider">
+          <ul class="list-inline intro-social-buttons">
+            <li>
+              <a href="#onas" class="btn btn-default btn-lg btn-header">
+                <span class="network-name"><h4>Dowiedz się więcej</h4></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page Content -->
+
+<a  name="onas"></a>
+<div *ngIf="!videoLoaded" class="placeholder">
+</div>
+
+<div *ngIf="videoLoaded" class="content-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="clearfix"></div>
+        <h1 class="section-heading text-center">Poznaj ideę Toastmasters!</h1>
+
+        <div style="position:relative;height:0;padding-bottom:56.25%"><iframe  src="https://www.youtube.com/embed/Hgtzx_SJ64g?ecver=2" width="100%" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+        <hr class="central-spacer">
+        <h2 class="section-heading text-center">Czemu warto?</h2>
+        <md-list>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+            <p md-header>…będziesz swobodnie wyrażał się na forum publicznym</p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+            <p md-header>…oswoisz lęk przed wystąpieniami</p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+            <p md-header>...będziesz potrafił zawrzeć swoje myśli w zrozumiałych i ciekawych wystąpieniach</p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+            <p md-header>…rozwiniesz swoje umiejętności komunikacyjne i liderskie</p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+            <p md-header>…nauczysz się przekazywać konstruktywną informacje zwrotną</p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+           <p md-header>…poznasz  <a routerLink="/artykuły/ludzie">ciekawych ludzi</a> z różnymi zainteresowaniami i pomysłami na życie </p>
+          </md-list-item>
+          <md-list-item>
+            <md-icon md-list-icon>checked</md-icon>
+            <p md-header>…spędzisz bardzo dobrze <a routerLink="/kontakt">wtorkowe</a> popołudnie ;)</p>
+          </md-list-item>
+        </md-list>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section bg-tm-blue border-top-tm-red">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h3 class=" text-center">Chcesz dowiedzieć się więcej?</h3>
+        <p class="text-center">Zostaw nam swój adres e-mail, a podeślemy ci informację o spotkaniach!</p>
+        <form (submit)="submitMail($event,mail.value)">
+          <div height="200%" class="input-group form-inline">
+            <span class="input-group-addon">@</span>
+            <input #mail id="mail" height="44" class="form-control" type="text" placeholder="Adres e-mail">
+            <span class="input-group-addon"><a href="javascript:;" (click)="submitMail($event,mail.value)"><img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/send-512.png" width="20px"></a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-section bg-tm-yellow border-top-tm-red">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">O nas</h2>
+        <p><span class="firstcharacter">T</span>ysiące mówców i&nbsp;liderów, to efekt  ponad dziewięćdziesięciu lat działalności klubów Toastmasters na&nbsp;całym świecie. Kilku pasjonatów zapragnęło zaszczepić ideę Toastmasters na&nbsp;krakowskich uczelniach. Tak oto w grudniu 2012&nbsp;roku narodził się Klub Toatmasters&nbsp;AGH. W&nbsp;związku z&nbsp;tym, że nasz klub przyciąga studentów nie tylko z AGH, w&nbsp;2016 zmieniliśmy nazwę na Toastmasters Students. Są wśród nas zarówno studenci jak&nbsp;i&nbsp;osoby, które rozpoczęły karierę zawodową i&nbsp;dostrzegły jak ważne są kompetencje komunikacyjne i&nbsp;liderskie w&nbsp;życiu osobistym i&nbsp;zawodowym.</p>
+      </div>
+      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+        <img *ngIf="videoLoaded" class="img-responsive img-rounded" src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/10455157_373821646110933_171795096141370473_n.jpg?oh=3b668bb1557561634582fce6025cc56f&oe=5994E667" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section bg-tm-blue border-top-tm-red">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <p>W naszym klubie spotkasz mówców, którzy chcą przezwyciężyć swój strach przed wystąpieniami publicznymi&nbsp;i takich, którzy zaprzyjaźnili się z&nbsp;tym strachem i&nbsp;ćwiczą swoje umiejętności, aby stawać się coraz lepszymi mówcami i&nbsp;liderami.<br>Uczestnictwo w spotkaniach jako gość jest bezpłatne. Opłata członkowska daje pełnoprawne uczestnictwo w&nbsp;spotkaniach – materiały szkoleniowe, realizowanie projektów itd.<br>Przyjdź i&nbsp;sprawdź czy to miejsce dla Ciebie!</p>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <img *ngIf="videoLoaded" class="img-responsive img-rounded" src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/15873425_706055436220884_4931110518620848552_n.jpg?oh=ebb394391edaeacc045995081907c4f3&oe=5983EC8B" alt="">
+      </div>
+    </div>
+    <hr class="section-heading-spacer">
+  </div>
+</div>
+
+
+<a  name="spotkania"></a>
+<div *ngIf="videoLoaded && nextEvent!=null" class="content-section bg-tm-yellow border-top-tm-red">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1">
+        <div class="clearfix"></div>
+        <h3 class="section-heading">Najbliższe spotkanie:</h3>
+        <a href="https://facebook.com/events/{{nextEvent.id}}">
+          <h2>{{nextEvent.name}}</h2>
+        </a>
+        <p class="small text-tm-gray">{{nextEvent.start_time | dateFormat}}</p>
+        <hr class="central-spacer">
+        <a href="https://facebook.com/events/{{nextEvent.id}}">
+          <img class="img-responsive img-rounded" margin="auto" src="{{nextEvent.cover.source}}" alt="">
+          <h3 class="text-center">Zobacz na Facebooku!</h3>
+        </a>
+        <hr class="central-spacer visible-xs">
+        <p [innerHTML]="textService.addHardSpaces(textService.shortenDescription(nextEvent.description))"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="invitation hidden-xs" style="position: absolute;
+    right: 44px; top:72px;">
+  <img src="assets/images/fb-invitation.png">
+</div>

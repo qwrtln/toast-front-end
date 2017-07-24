@@ -1,0 +1,44 @@
+<shared-header img="articles.jpg" page="articles">
+  <div class="title">
+    {{selectedArticle.title.toUpperCase()}}
+  </div>
+</shared-header>
+
+
+<md-sidenav-container class="example-container" color="primary" >
+
+  <!-- Sidenav -->
+  <md-sidenav #sidenav class="example-sidenav bg-tm-blue" opened="false" mode="over" color="primary">
+    <md-list>
+      <md-list-item *ngFor="let article of articles">
+        <button routerLink="{{'/artykuły/'+article.id}}" md-button (click)="sidenav.close()" class="select-article-button" >
+          <h3 [ngClass] = "{'selected-article-title': selectedArticle!=null && selectedArticle.title == article.title}">{{article.title}}</h3>
+        </button>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+
+  <!-- Article view -->
+  <div class="container">
+    <article class="content-container row">
+      <div class="col-xs-12  col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+        <p *ngFor="let paragraph of selectedArticle.paragraphs; let first = first"
+           class="article"
+           [ngClass]= "{'first-paragraph': first}" [innerHTML]="textService.addHardSpaces(paragraph)">
+        </p>
+      </div>
+    </article>
+  </div>
+
+</md-sidenav-container>
+
+
+<nav id="buttonNav" class="navbar-fixed-bottom">
+  <div class="fixed-action-btn btm-left-corner" style="bottom: 45px; right: 24px;">
+    <button md-mini-fab (click)="sidenav.open()" class="fixed-action-btn bg-tm-blue" color="black">
+      <img src="assets/images/arrow_right.png" width="50%">
+    </button>
+  </div>
+</nav>
+

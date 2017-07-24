@@ -1,0 +1,55 @@
+<div class="contact-section bg-tm-blue border-top-tm-red">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <div class="clearfix"></div>
+        <h2>Kontakt</h2>
+        <p style="text-align: justify;">Zapraszamy na spotkania w każdy wtorek na godz. 18.30.</p>
+        <p>Masz pytania? Napisz do nas:
+          <a md-icon-button href="mailto:{{contact_person}}" class="text-tm-yellow"><md-icon>mail_outline</md-icon></a>
+          <a md-icon-button href="https://www.messenger.com/t/115008038658963" target="_blank">
+            <img src="assets/images/fb-messenger.png" width="80%" height="auto">
+          </a>
+        </p>
+        <div class="dummy" *ngIf="nextEvent==null"></div>
+        <div *ngIf="nextEvent!=null" class="content-section">
+          <h2 class="section-heading">Najbliższe spotkanie:</h2>
+          <a href="https://facebook.com/events/{{nextEvent.id}}">
+            <h3 class="text-tm-yellow">{{nextEvent.name}}</h3>
+          </a>
+          <p>{{nextEvent.start_time | dateFormat}}</p>
+          <p>{{location.label}}</p>
+          <p>{{nextEvent.place.location.street}}</p>
+          <hr class="central-spacer">
+          <a href="https://facebook.com/events/{{nextEvent.id}}">
+            <img class="img-responsive img-rounded" src="{{nextEvent.cover.source}}" alt="">
+            <h3 class="text-center text-tm-yellow visible-xs">Zobacz na Facebooku!</h3>
+          </a>
+          <hr class="central-spacer visible-xs">
+        </div>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6" *ngIf="nextEvent!=null">
+        <h3>Jak do nas trafić:</h3>
+        <sebm-google-map *ngIf="location != null"
+          [latitude]="location.lat"
+          [longitude]="location.lng"
+          [zoom]="zoom"
+          [disableDefaultUI]="false"
+          [zoomControl]="false"
+          (mapClick)="mapClicked($event)">
+          <sebm-google-map-marker *ngIf="location != null"
+              [latitude]="location.lat"
+              [longitude]="location.lng"
+              [markerDraggable]="location.draggable"
+              (dragEnd)="markerDragEnd(location, $event)">
+            <sebm-google-map-info-window>
+              <strong>InfoWindow content</strong>
+            </sebm-google-map-info-window>
+          </sebm-google-map-marker>
+        </sebm-google-map>
+      </div>
+    </div>
+    <hr class="section-heading-spacer">
+  </div>
+  <!-- /.container -->
+</div>

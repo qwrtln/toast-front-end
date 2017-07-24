@@ -1,0 +1,66 @@
+h2.mainArticleLink {
+  font-family: Georgia, sans-serif;
+}
+
+.content-container {
+  padding: 50px 0 70px;
+}
+
+md-sidenav {
+  width: 300px;
+}
+
+.space {
+  padding-top: 15px;
+}
+
+p.article {
+  text-align: justify;
+  line-height: 1.35;
+  font-size: 22px;
+}
+
+p.first-paragraph {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Georgia, sans-serif;
+  padding-bottom: 30px;
+}
+
+.first-character {
+  background: #363f48;
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: Georgia, sans-serif;
+  font-size: 75px;
+  line-height: 60px;
+  text-align: center;
+  margin: 5px 15px 15px 0;
+}
+
+md-list-item.md-3-line{
+  height: auto !important;
+}
+
+.select-article-button {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.selected-article-title {
+  font-weight: bold;
+}
+
+md-list-item {
+  padding-bottom: 10px;
+}
+
+.btm-left-corner {
+  margin-bottom: 3px;
+  margin-left: 3px;
+}
+
+.blue-bg {
+
+}

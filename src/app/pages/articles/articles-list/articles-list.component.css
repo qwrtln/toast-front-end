@@ -1,0 +1,17 @@
+
+p.intro {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Georgia, sans-serif;
+  padding: 50px 0 30px;
+  text-align: justify;
+}
+
+.articles-list {
+
+}
+
+p.article-description {
+  padding: 0 25px 20px;
+  text-align: justify;
+}

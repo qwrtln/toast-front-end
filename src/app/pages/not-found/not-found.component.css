@@ -1,0 +1,22 @@
+div.not-found {
+    border-top: solid #f2df74 1px;
+    background-color: #f2df74;
+    align-items: center;
+    border-bottom: solid #f2df74 1px; /* This prevents a blank space on the bottom of the div */
+}
+
+img {
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: bold;
+    color: #004165;
+    padding-top: 100px;
+}
+
+h2 {
+    font-weight: bold;
+    color: #772432;
+    padding-bottom: 100px;
+}

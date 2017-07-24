@@ -1,0 +1,33 @@
+<div class="contact-section bg-tm-blue border-top-tm-red">
+  <div class="container ">
+    <div class="clearfix"></div>
+    <h1 class="text-center">Dziękujemy Ci! Wkrótce się odezwiemy</h1>
+    <p class="text-center">Tymczasem bądź z nami na bieżąco. Odwiedź nasz profil na Facebooku, gdzie znajdziesz najbardziej aktualne informacje o tym, co się dzieje w naszym klubie.</p>
+
+      <div class="fb-page center-block" data-href="https://www.facebook.com/ToastmastersStudents/"
+         data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+         data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/ToastmastersStudents/" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/ToastmastersStudents/">Toastmasters Students</a>
+        </blockquote>
+      </div>
+
+    <hr class="section-heading-spacer">
+    <p class="text-center" style="text-align: justify;">Już teraz zapraszamy Cię w najbliższy wtorek o godz. 18.30. na następne spotkanie naszego klubu!</p>
+    <div class="dummy" *ngIf="nextEvent==null"></div>
+    <div *ngIf="nextEvent!=null" class="content-section">
+      <h2 class="section-heading">Najbliższe spotkanie:</h2>
+      <a href="https://facebook.com/events/{{nextEvent.id}}">
+        <h3 class="text-tm-yellow">{{nextEvent.name}}</h3>
+      </a>
+      <p>{{nextEvent.start_time | dateFormat}}</p>
+      <p>{{nextEvent.place.location.street}}</p>
+      <a href="https://facebook.com/events/{{nextEvent.id}}">
+        <img class="img-responsive img-rounded" src="{{nextEvent.cover.source}}" alt="">
+        <h3 class="text-center text-tm-yellow visible-xs">Zobacz na Facebooku!</h3>
+      </a>
+      <hr class="central-spacer visible-xs">
+    </div>
+    <hr class="section-heading-spacer">
+  </div>
+</div>

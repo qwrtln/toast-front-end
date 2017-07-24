@@ -1,0 +1,57 @@
+.intro-header {
+  padding: 12% 0 12%;
+}
+
+.intro-message {
+  position: relative;
+  text-align: center;
+  color: #f8f8f8;
+  height: 230px;
+}
+
+
+.intro-message > h1 {
+  margin: 0;
+  font-size: 5em;
+}
+
+.intro-message > h1,h3 {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-family: "Gotham",Arial,sans-serif;
+  font-weight: 700;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+@media(max-width:767px) {
+  .intro-header {
+    padding: 25% 0 25%;
+  }
+
+  .intro-message {
+    height: 100px;
+  }
+
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  .intro-divider {
+    width: 50%;
+  }
+
+  .btn-header {
+    width: 80%;
+  }
+}
+
+
+@media(max-width:457px) {
+  .intro-header {
+    padding: 45% 0 45%;
+  }
+}
