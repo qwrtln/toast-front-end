@@ -6,7 +6,7 @@ h2.mainArticleLink {
   padding: 50px 0 70px;
 }
 
-md-sidenav {
+mat-sidenav {
   width: 300px;
 }
 
@@ -39,7 +39,7 @@ p.first-paragraph {
   margin: 5px 15px 15px 0;
 }
 
-md-list-item.md-3-line{
+mat-list-item.md-3-line{
   height: auto !important;
 }
 
@@ -52,7 +52,7 @@ md-list-item.md-3-line{
   font-weight: bold;
 }
 
-md-list-item {
+mat-list-item {
   padding-bottom: 10px;
 }
 

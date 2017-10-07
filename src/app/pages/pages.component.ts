@@ -2,6 +2,7 @@ import { Component, OnInit, Inject, HostBinding } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { DOCUMENT } from '@angular/platform-browser';
 import { fadeInAnimation } from '../animations/fade-in.animation';
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'pages-root',

@@ -5,18 +5,18 @@
 </shared-header>
 
 
-<md-sidenav-container class="example-container" color="primary" >
+<mat-sidenav-container class="example-container" color="primary" >
 
   <!-- Sidenav -->
-  <md-sidenav #sidenav class="example-sidenav bg-tm-blue" opened="false" mode="over" color="primary">
-    <md-list>
-      <md-list-item *ngFor="let article of articles">
-        <button routerLink="{{'/artykuły/'+article.id}}" md-button (click)="sidenav.close()" class="select-article-button" >
+  <mat-sidenav #sidenav class="example-sidenav bg-tm-blue" opened="false" mode="over" color="primary">
+    <mat-list>
+      <mat-list-item *ngFor="let article of articles">
+        <button routerLink="{{'/artykuły/'+article.id}}" mat-button (click)="sidenav.close()" class="select-article-button" >
           <h3 [ngClass] = "{'selected-article-title': selectedArticle!=null && selectedArticle.title == article.title}">{{article.title}}</h3>
         </button>
-      </md-list-item>
-    </md-list>
-  </md-sidenav>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
 
 
   <!-- Article view -->
@@ -31,7 +31,7 @@
     </article>
   </div>
 
-</md-sidenav-container>
+</mat-sidenav-container>
 
 
 <nav id="buttonNav" class="navbar-fixed-bottom">

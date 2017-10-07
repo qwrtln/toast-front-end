@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdListModule, MdIconModule, MdButtonModule } from '@angular/material';
+import { MatListModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
@@ -36,9 +36,9 @@ const appRouters: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdListModule,
-    MdIconModule,
-    MdButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatButtonModule,
     RouterModule.forRoot(appRouters),
     AgmCoreModule.forRoot({apiKey: 'AIzaSyARGZcd1RxX_J64L-bWCycUij_nbL-wG7w'})
   ],

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticleComponent } from './article/article.component';
 import {
-  MdSidenavModule, MdListModule, MdIconModule, MdToolbarModule, MdMenuModule,
-  MdCardModule, MdButtonModule
+  MatSidenavModule, MatListModule, MatIconModule, MatToolbarModule, MatMenuModule,
+  MatCardModule, MatButtonModule
 } from '@angular/material';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,13 +24,13 @@ const articlesRouters: Routes = [
     BrowserModule,
     SharedModule,
     CommonModule,
-    MdButtonModule,
-    MdCardModule,
-    MdMenuModule,
-    MdToolbarModule,
-    MdIconModule,
-    MdSidenavModule,
-    MdListModule,
+    MatButtonModule,
+    MatCardModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
     RouterModule.forChild(articlesRouters)
   ],
   declarations: [
