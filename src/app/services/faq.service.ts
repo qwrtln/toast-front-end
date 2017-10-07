@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http, Response } from '@angular/http';
-import { BackendHttpService } from '../../../services/backend-http.service';
+import { BackendHttpService } from './backend-http.service';
 import 'rxjs/add/observable/of';
 
 @Injectable()
-export class ArticlesService extends BackendHttpService {
+export class FaqService extends BackendHttpService {
 
-  articles: any[] = null;
+  questions: any[] = null;
 
   constructor(protected http: Http) {
     super();
   }
 
-  public getArticles(): Observable<any> {
-    const endpoint = 'articles';
-    if (this.articles == null) {
+  public getQuestions(): Observable<any> {
+    const endpoint = 'questions';
+    if (this.questions == null) {
       return this.http.get(this.createEndpoint(endpoint)).map((res: Response) => {
-        this.articles = res.json();
+        this.questions = res.json();
         return res.json();
       });
     } else {
-      return Observable.of(this.articles);
+      return Observable.of(this.questions);
     }
   }
 

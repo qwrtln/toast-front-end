@@ -17,8 +17,18 @@ h1 {
   background-color: #a9b2b1;
 }
 
+.bg-tm-light-gray {
+  background-color: #f8f8f8;
+}
+
 .bg-tm-red {
   background-color: #772432;
+  color: white;
+}
+
+.bg-tm-raspberry {
+  background-color: #cd202c;
+  color: white;
 }
 
 .text-tm-blue {
@@ -35,6 +45,10 @@ h1 {
 
 .text-tm-red {
   color: #772432;
+}
+
+.text-white {
+  color: white;
 }
 
 .border-top-tm-red {

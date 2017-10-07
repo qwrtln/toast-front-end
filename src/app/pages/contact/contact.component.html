@@ -6,9 +6,10 @@
         <h2>Kontakt</h2>
         <p style="text-align: justify;">Zapraszamy na spotkania w każdy wtorek na godz. 18.30.</p>
         <p>Masz pytania? Napisz do nas:
-          <a mat-icon-button href="mailto:{{contact_person}}" class="text-tm-yellow"><mat-icon>mail_outline</mat-icon></a>
-          <a mat-icon-button href="https://www.messenger.com/t/115008038658963" target="_blank">
-            <img src="assets/images/fb-messenger.png" width="80%" height="auto">
+          <br><a mat-icon-button href="mailto:{{contact_person}}" class="text-tm-yellow"><mat-icon>mail_outline</mat-icon> </a>
+          <a class="text-white" href="mailto:{{contact_person}}">{{contact_person}}</a>
+          <br><a mat-icon-button href="https://www.messenger.com/t/115008038658963" target="_blank">
+            <span><img src="assets/images/fb-messenger.png" width="80%" height="auto"> Napisz na facebooku</span>
           </a>
         </p>
         <div class="dummy" *ngIf="nextEvent==null"></div>

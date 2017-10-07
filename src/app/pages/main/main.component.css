@@ -16,7 +16,6 @@ h6 {
 }
 
 p {
-  text-align: justify;
 }
 .lead {
   font-size: 18px;
@@ -24,8 +23,8 @@ p {
 }
 
 .intro-header {
-  padding-top:80px;
-  padding-bottom: 50px;
+  padding-top:200px;
+  padding-bottom: 0px;
   text-align: center;color: #f8f8f8;
 }
 
@@ -37,7 +36,7 @@ p {
 
 .intro-message > h1 {
   margin: 0;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 1px rgba(64,64,64,0.6), -2px -2px 1px rgba(64,64,64,0.6), -2px 2px 6px rgba(64,64,64,0.6), 2px -2px 6px rgba(64,64,64,0.6), 8px 8px 1px rgba(0,0,0,0.6);
   font-size: 5em;
 }
 
@@ -92,6 +91,18 @@ p {
 
 .section-heading {
   margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.facebook-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-page-text {
+  font-size: larger;
+  font-family: "Gotham", Arial, sans-serif;
+  line-height: 2;
 }
 
 .section-heading-spacer {

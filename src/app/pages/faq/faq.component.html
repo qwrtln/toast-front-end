@@ -1,23 +1,23 @@
-<shared-header img="faq.jpg" page="faq">
-    <div class="title">
-        NAJCZĘŚCIEJ ZADAWANE PYTANIA
-    </div>
+<shared-header img="IMG_5482.jpg" page="faq">
+  <div class="title">
+    NAJCZĘŚCIEJ ZADAWANE PYTANIA
+  </div>
 </shared-header>
 <div class="container">
-    <div class="row">
-        <div class="top col-sm-offset-1 col-sm-10">
-            <div *ngFor="let q of questions; let i = index;" >
-                <div class="panel-heading">
-                    <h2>
-                        <a role="button">
-                            {{i+1}}. {{q.question}}
-                        </a>
-                    </h2>
-                </div>
-                <div *ngFor="let p of q.answer">
-                    <p style="text-align: justify;">{{p}}</p>
-                </div>
-            </div>
+  <div class="row">
+    <div class="top col-sm-offset-1 col-sm-10">
+      <div *ngFor="let q of displayedQuestions; let i = index;" >
+        <div class="panel-heading">
+          <a href="javascript:;" (click)="q.toggleActive()">
+            <h3 class="text-tm-blue question">
+              {{i+1}}. {{q.question}}
+            </h3>
+          </a>
         </div>
+        <div  *ngFor="let p of q.answer">
+          <p class="answer" [ngClass]= "{'answer-inactive': !q.active}">{{p}}</p>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

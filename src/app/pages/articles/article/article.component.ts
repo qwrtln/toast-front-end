@@ -3,9 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { fadeInAnimation } from '../../../animations/fade-in.animation';
 import { TextService } from '../../../services/text.service';
 import { Title } from '@angular/platform-browser';
+import {ArticlesService} from "../services/articles.service";
 
 declare const require: any;
-const data = require('../articles.content.json');
 
 @Component({
   selector: 'articles-articles',
@@ -16,9 +16,9 @@ const data = require('../articles.content.json');
 
 export class ArticleComponent implements OnInit {
 
-  articles: Article[] = data;
+  articles: Article[];
 
-  selectedArticle;
+  selectedArticle = null;
 
   public setArticleTitle(article: any) {
     this.selectedArticle = article;
@@ -35,15 +35,21 @@ export class ArticleComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private textService: TextService, private titleService: Title) {
+              private textService: TextService, private titleService: Title,
+              private articlesService: ArticlesService) {
   }
 
   @HostBinding('@fadeInAnimation') fadeInAnimation() {}
 
   ngOnInit() {
     this.route.params.subscribe((a) => {
-      this.setArticleTitleById(a.id);
-      this.titleService.setTitle(`${this.selectedArticle.title} - Toastmasters Students Kraków`);
+      this.articlesService.getArticles().subscribe(
+        response => {
+          this.articles = response;
+          this.setArticleTitleById(a.id);
+          this.titleService.setTitle(`${this.selectedArticle.title} - Toastmasters Students Kraków`);
+        }
+      );
     });
   }
 

@@ -1,44 +1,25 @@
-<shared-header img="articles.jpg" page="articles">
+<shared-header *ngIf="selectedArticle!=null" img={{selectedArticle.image}} page="articles">
   <div class="title">
     {{selectedArticle.title.toUpperCase()}}
   </div>
+  <div class="subtitle">
+    Autor: {{selectedArticle.author}}
+  </div>
 </shared-header>
 
-
-<mat-sidenav-container class="example-container" color="primary" >
-
-  <!-- Sidenav -->
-  <mat-sidenav #sidenav class="example-sidenav bg-tm-blue" opened="false" mode="over" color="primary">
-    <mat-list>
-      <mat-list-item *ngFor="let article of articles">
-        <button routerLink="{{'/artykuły/'+article.id}}" mat-button (click)="sidenav.close()" class="select-article-button" >
-          <h3 [ngClass] = "{'selected-article-title': selectedArticle!=null && selectedArticle.title == article.title}">{{article.title}}</h3>
-        </button>
-      </mat-list-item>
-    </mat-list>
-  </mat-sidenav>
-
-
-  <!-- Article view -->
-  <div class="container">
-    <article class="content-container row">
-      <div class="col-xs-12  col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-        <p *ngFor="let paragraph of selectedArticle.paragraphs; let first = first"
-           class="article"
-           [ngClass]= "{'first-paragraph': first}" [innerHTML]="textService.addHardSpaces(paragraph)">
-        </p>
-      </div>
-    </article>
-  </div>
-
-</mat-sidenav-container>
-
-
-<nav id="buttonNav" class="navbar-fixed-bottom">
-  <div class="fixed-action-btn btm-left-corner" style="bottom: 45px; right: 24px;">
-    <button md-mini-fab (click)="sidenav.open()" class="fixed-action-btn bg-tm-blue" color="black">
-      <img src="assets/images/arrow_right.png" width="50%">
-    </button>
-  </div>
-</nav>
+<!-- Article view -->
+<div class="container">
+  <article *ngIf="selectedArticle!=null" class="content-container row">
+    <div class="col-xs-12  col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/artykuły">Artykuły</a></li>
+        <li class="breadcrumb-item active">{{selectedArticle.title}}</li>
+      </ol>
+      <p *ngFor="let paragraph of selectedArticle.paragraphs; let first = first"
+         class="article"
+         [ngClass]= "{'first-paragraph': first}" [innerHTML]="textService.addHardSpaces(paragraph)">
+      </p>
+    </div>
+  </article>
+</div>
 

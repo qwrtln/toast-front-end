@@ -17,29 +17,25 @@ import { Title } from '@angular/platform-browser';
 export class MainComponent implements OnInit {
 
   public nextEvent: Object;
-
   public videoLoaded: boolean;
 
   constructor(private facebookService: FacebookService, private textService: TextService,
               private http: Http, private titleService: Title, private router: Router) {}
-
-  @HostListener ('window:scroll', ['$event']) loadContent(event) {
-    if (!this.videoLoaded) {
-      this.videoLoaded = true;
-      this.facebookService.getLastEvent().subscribe(
-        response => {
-          this.nextEvent = response;
-        },
-        error => console.error(error)
-      );
-    }
-  }
 
   @HostBinding('@fadeInAnimation') fadeInAnimation() {}
 
   ngOnInit() {
     this.videoLoaded = false;
     this.titleService.setTitle('Toastmasters Students - Klub Mówców i Liderów w Krakowie');
+    if (!this.videoLoaded) {
+      this.facebookService.getLastEvent().subscribe(
+        response => {
+          this.nextEvent = response;
+          this.videoLoaded = true;
+        },
+        error => console.error(error)
+      );
+    }
   }
 
 

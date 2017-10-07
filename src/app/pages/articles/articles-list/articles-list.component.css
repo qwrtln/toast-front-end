@@ -7,11 +7,40 @@ p.intro {
   text-align: justify;
 }
 
-.articles-list {
-
+.article-image {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 p.article-description {
   padding: 0 25px 20px;
-  text-align: justify;
+  text-align: center;
+}
+
+.mainArticleLink {
+}
+
+.readMore {
+  background-color: white;
+  color: #004165;
+  font-size: 14px;
+  font-weight: 800;
+  border: 2px solid black;
+  padding: 5px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.readMore:hover {
+  background-color: #004165;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  border: 2px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.container {
+  padding-bottom: 80px;
 }

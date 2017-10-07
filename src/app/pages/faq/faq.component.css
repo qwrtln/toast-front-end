@@ -1,0 +1,15 @@
+.question {
+  font-weight: 900;
+}
+
+.answer {
+  text-align: justify;
+  font-size: 18px;
+  -webkit-transition: all .75s;
+  -moz-transition: all .75s;
+  transition: all .75s;
+}
+.answer-inactive {
+  font-size: 0;
+  line-height: 0;
+}
