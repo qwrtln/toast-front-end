@@ -10,9 +10,6 @@
           <hr class="intro-divider">
           <ul class="list-inline intro-social-buttons">
             <li>
-              <a href="#onas" class="btn btn-default btn-lg btn-header">
-                <span class="network-name"><h4>Dowiedz się więcej</h4></span>
-              </a>
               <a href="http://www.subscribepage.com/mozesz" class="btn btn-default btn-lg btn-header">
                 <span class="network-name"><h4>Zapisz się na demo</h4></span>
               </a>
@@ -33,17 +30,62 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1">
         <div class="clearfix"></div>
-        <h1 class="section-heading text-center text-uppercase">Najbliższe spotkanie</h1>
-        <a href="https://facebook.com/events/{{nextEvent.id}}">
-          <h2 class="section-heading text-center">{{nextEvent.name}}</h2>
-        </a>
-        <p class="small text-tm-gray">{{nextEvent.start_time | dateFormat}}</p>
+        <h1 class="section-heading text-center text-uppercase">Możesz! - Spotkanie Otwarte Klubu Toastmasters Students</h1>
+        <h4 class="text-tm-gray text-center">{{nextEvent.start_time | dateFormat}}</h4>
         <a href="https://facebook.com/events/{{nextEvent.id}}">
           <img class="img-responsive img-rounded facebook-img" margin="auto" src="{{nextEvent.cover.source}}" alt="">
           <h3 class="text-center">Zobacz na Facebooku!</h3>
         </a>
+        <a href="http://www.subscribepage.com/mozesz">
+          <h3 class="text-center">Zapisz się!</h3>
+        </a>
         <hr class="central-spacer visible-xs">
-        <p class="main-page-text text-justify" [innerHTML]="textService.addHardSpaces(textService.shortenDescription(nextEvent.description))"></p>
+        <!--p class="main-page-text text-justify" [innerHTML]="textService.addHardSpaces(textService.shortenDescription(nextEvent.description))"></p-->
+        <p class="main-page-text text-justify" ><i>A na koniec semestru każdy z Was zrobi krótką prezentację z wybranego
+          przez siebie tematu.</i></p>
+        <p class="main-page-text text-justify" >Odsuwasz od siebie tą myśl z tygodnia na tydzień. Nie wiesz, jak się do
+          tego zabrać. W końcu przychodzi koniec semestru i nie ma innego wyjścia. Może jednak lepiej byłoby napisać to
+          kolokwium?</p>
+        <p class="main-page-text text-justify" >Na ostatnią chwilę sklejasz kilka przypadkowych slajdów, drukujesz
+          notatki i idziesz na zajęcia.</p>
+        <p class="main-page-text text-justify" ><i>To kto ma przygotowaną na dziś prezentację?</i></p>
+        <p class="main-page-text text-justify" >Rozglądasz się dookoła, ale nikt się nie zgłasza. Podnosisz drżącą rękę.
+          Serce zaczyna bić mocniej. Zapominasz, o czym masz mówić.</p>
+        <p class="main-page-text text-justify" >Chociaż z drugiej strony… i tak nikt nie będzie tego słuchał. Może
+          naciągane 3.0 nie jest takie złe? Byle mieć to za sobą. Byle uniknąć kilkudziesięciu par oczu zwróconych w
+          Twoim kierunku.</p>
+        <mat-list>
+          <mat-list-item>
+            <mat-icon mat-list-icon>label</mat-icon>
+            <p mat-header>A może jednak masz w sobie trochę ambicji?</p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>label</mat-icon>
+            <p mat-header>Może chcesz prezentować w sposób ciekawy, zabawny, inspirujący?</p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>label</mat-icon>
+            <p mat-header>Może chcesz, aby inny Cię wysłuchali i zrozumieli?</p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>label</mat-icon>
+            <p mat-header>Może chcesz nabrać pewności siebie i swobody w kontaktach interpersonalnych?</p>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-icon mat-list-icon>label</mat-icon>
+            <p mat-header>Może chcesz być lepszym mówcą, albo skuteczniejszym liderem?</p>
+          </mat-list-item>
+        </mat-list>
+        <p class="main-page-text text-justify" >Mamy dla Ciebie dobrą wiadomość:</p>
+        <h2>Możesz!</h2>
+        <p class="main-page-text text-justify" >Przyjdź na Spotkanie Otwarte Klubu Mówców i Liderów Toastmasters
+          Students. Dowiesz się, jak zacząć się rozwijać w zakresie wystąpień publicznych i w jaki sposób pomoże Ci to
+          w życiu zawodowym i towarzyskim.</p>
+        <p class="main-page-text text-justify" >Spotkanie odbędzie się 🗓 24 października 🏢 w Auli 0.10a, w budynku B8
+          Akademii Górniczo-Hutniczej w Krakowie. Zaczynamy punktualnie 🕕 o 18:00.</p>
+        <a href="http://www.subscribepage.com/mozesz">
+          <h3 class="text-center">Potwierdź swój udział za pomocą formularza</h3>
+        </a>
       </div>
     </div>
   </div>
