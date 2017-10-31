@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { fadeInAnimation } from '../../../animations/fade-in.animation';
 import { TextService } from '../../../services/text.service';
 import { Title } from '@angular/platform-browser';
-import {ArticlesService} from "../services/articles.service";
+import {ArticlesService} from '../services/articles.service';
 
 declare const require: any;
 
