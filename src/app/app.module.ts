@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { FacebookService } from './services/facebook.service';
-import { CoreModule } from './core/core.module';
-import { PagesModule } from './pages/pages.module';
-import {FaqService} from "./services/faq.service";
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {FacebookService} from './services/facebook.service';
+import {CoreModule} from './core/core.module';
+import {PagesModule} from './pages/pages.module';
+import {FaqService} from './services/faq.service';
+import {GuestsService} from './services/guests.service';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {FaqService} from "./services/faq.service";
     CoreModule,
     PagesModule
   ],
-  providers: [FacebookService, FaqService],
+  providers: [FacebookService, FaqService, GuestsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
