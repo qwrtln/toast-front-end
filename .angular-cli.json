@@ -9,7 +9,8 @@
       "outDir": "dist/build",
       "assets": [
         "assets",
-        "favicon.ico"
+        "lKiKd11I2I",
+        "sitemap.xml"
       ],
       "index": "index.html",
       "main": "main.ts",
