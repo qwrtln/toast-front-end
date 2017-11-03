@@ -1,10 +1,10 @@
-import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
+import { Component, HostBinding, OnInit} from '@angular/core';
 import { FacebookService } from '../../services/facebook.service';
-import { Http, Headers } from '@angular/http';
 import { fadeInAnimation } from '../../animations/fade-in.animation';
 import { TextService } from '../../services/text.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { GuestsService } from '../../services/guests.service';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   public videoLoaded: boolean;
 
   constructor(private facebookService: FacebookService, private textService: TextService,
-              private http: Http, private titleService: Title, private router: Router) {}
+              private guestsService: GuestsService, private titleService: Title, private router: Router) {}
 
   @HostBinding('@fadeInAnimation') fadeInAnimation() {}
 
@@ -42,24 +42,16 @@ export class MainComponent implements OnInit {
   public submitMail(event: Event, email: String) {
     event.preventDefault();
 
-    const contentHeaders = new Headers();
-    contentHeaders.append('Accept', 'application/json');
-    contentHeaders.append('Content-Type', 'application/json');
-
-    const body = JSON.stringify({email: email});
-
-    this.http.post('http://188.116.52.177:7001/api/submit', body, {headers: contentHeaders})
-      .subscribe(
+    this.guestsService.submitMail(email)
+    .subscribe(
         response => {
-          console.log('Ok');
+          this.router.navigateByUrl('/dziekujemy');
         },
         error => {
           alert(error.text());
           console.log(error.text());
         }
       );
-    console.log(body);
-    this.router.navigateByUrl('/dziekujemy');
   }
 
 }
