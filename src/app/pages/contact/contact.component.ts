@@ -38,7 +38,17 @@ export class ContactComponent implements OnInit {
     this.facebookService.getLastEvent().subscribe(
       response => {
         this.nextEvent = response;
-        this.setMapMarker(response);
+        if (response.place.location) {
+          this.setMapMarker(response);
+        }
+        else {
+          this.location = new Marker(
+            this.lat,
+            this.lng,
+            false,
+            response.place.name
+          );
+        }
       },
       error => console.error(error)
     );
